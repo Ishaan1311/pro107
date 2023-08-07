@@ -40,18 +40,10 @@ def goal_track(img,bbox):
     for i in range(len(xs)-1):
         cv2.circle(img,(xs[i],ys[i]),2,(0,0,255),5)
 
-def drawBox(img,bbox):
-    x,y,w,h = int(bbox[0]),int(bbox[1]),int(bbox[2]),int(bbox[3])
-    cv2.rectangle(img,(x,y),((x+w),(y+h)),(255,0,255),3,1)
-    cv2.putText(img,"Tracking",(75,90),cv2.FONT_HERSHEY_SIMPLEX,0.7,(0,255,0),2)
-
-
-
 def drawBox(img, bbox):
     x, y, w, h = int(bbox[0]), int(bbox[1]), int(bbox[2]), int(bbox[3])
     cv2.rectangle(img,(x,y),((x+w),(y+h)),(255,0,255),3,1)
     cv2.putText(img,"Tracking",(75,90),cv2.FONT_HERSHEY_SIMPLEX,0.7,(0,255,0),2)
-
 
 while True:
     
